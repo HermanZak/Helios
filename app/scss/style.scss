@@ -6,19 +6,309 @@
 
 // __________________________________START_HEADER__________________________________________________________
 
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-bottom: 20px;
+        // margin-bottom: 50px;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 50px;
+        @include fproxima500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            width: 100%;
+            text-transform: none;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__menu {
+        margin-right: 100px;
+
+        li {
+
+            a {
+                position: relative;
+                color: #000;
+                cursor: pointer;
+                line-height: 20px;
+                text-decoration: none;
+                font-size: 20px;
+
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #000;
+                    transition: width 0.3s ease-out;
+                }
+
+                &:hover:after,
+                &:focus:after {
+                    width: 100%;
+                }
+            }
+
+
+            &+li {
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
 // __________________________________END_HEADER__________________________________________________________
 
+// __________________________________START_SLIDER__________________________________________________________
 
-// __________________________________START_SERCH__________________________________________________________
+.container-slider {
+    padding-left: 35px;
+    padding-bottom: 20px;
+}
+
+.photo-slider {
+    // padding-left: 20px;
+    margin-top: 50px;
+    position: relative;
+
+    img {
+        max-height: 600px;
+        // width: 800px;
+    }
+}
+
+.page-home__slider__item {
+    margin: 0 15px;
+
+    span {
+        margin: 5px 0;
+        display: block;
+        @include futura400;
+        color: $text;
+        font-size: 16px;
+    }
+}
 
 
 
-// __________________________________END_SERCH__________________________________________________________
 
-// __________________________________START_PRODUCTS__________________________________________________________
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $text;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+    // opacity: .8;
+}
+
+.slick-arrow:hover,
+.slick-arrow:focus {
+    // background-color: transparent;
+    outline: none;
+}
+
+.slick-prev {
+    left: 15px;
+    // left: auto;
+}
+
+.slick-next {
+    right: 35px;
+}
+
+.slick-arrow::before {
+    display: none;
+}
+
+// __________________________________END_SLIDER__________________________________________________________
+
+// __________________________________START_BIOGRAPHY__________________________________________________________
+
+.container-biography {
+    width: 770px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.biography {
+    @include fhalvetica300;
+    letter-spacing: 0px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-content {
+        width: 500px;
+        color: #222;
+
+        &-title {
+            font-size: 28px;
+
+            line-height: 30px;
+            color: $text;
+        }
+    }
+
+    &-info {
+        width: 217px;
+        text-align: right;
+
+        span {
+            display: block;
+        }
+
+        &-title {
+
+            font-size: 28px;
+            padding-bottom: 15px;
+            line-height: 45px;
+            color: $text;
+        }
+
+
+    }
+}
+
+// __________________________________END_BIOGRAPHY__________________________________________________________
+
+// __________________________________START_FORM__________________________________________________________
+
+.form {
+    width: 730px;
+    margin: 0 auto;
+    padding-top: 50px;
+    // padding-bottom: 30px;
+
+
+    .field-element {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #000;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: normal;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    p {
+        padding: 0;
+        margin: 0px 0;
+
+    }
+
+    &-name {
+        padding-top: 20px;
+        margin-bottom: 20px;
+
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+
+            // width: 100%
+            span {
+                font-size: 12px;
+                @include fhalvetica300;
+            }
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &-emaill {
+        margin-bottom: 20px;
+    }
+
+    &-subject {
+        margin-bottom: 20px;
+    }
+
+    &-first-name {
+        width: 48%;
+    }
+
+    &-last-name {
+        width: 48%;
+    }
+
+    &-message {
+        max-width: 100%;
+
+        .message {
+            height: 106px;
+            max-width: 100%;
+        }
+    }
+
+    &-btn {
+        margin-top: 25px;
+
+        button {
+            width: 127px;
+            height: 42px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background-color: #000;
+            color: #fff;
+            transition: all .3s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+// __________________________________END_FORM__________________________________________________________
 
 
 
 
+// __________________________________START_FOOTER__________________________________________________________
 
-// __________________________________END_PRODUCTS__________________________________________________________
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #000;
+    text-align: center;
+
+    span {
+        @include futura400;
+        font-size: 16px;
+    }
+}
+
+
+// __________________________________END_FOOTER__________________________________________________________

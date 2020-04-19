@@ -22,15 +22,44 @@ li {
     display: inline-block;
 }
 
+img {
+    background-repeat: no-repeat;
+    // display: block;
+    background-position: center;
+    background-size: cover;
+}
 
-// body {
-//     font-family: 'Roboto-Regular', sans-serif;
-//     font-size: 15px;
-//     font-weight: 400;
-//     line-height: 24px;
-//     color: $text;
-// }
+html,
+body {
+    height: 100%;
+}
 
-// .container {}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+body {
+    @include fproxima400;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $text;
+    letter-spacing: 1px;
+
+}
+
+.container {
+    padding: 0 30px;
+}
 
 // .container-fluid {}
